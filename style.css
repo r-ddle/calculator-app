@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background: linear-gradient(to bottom, #93c5fd, #0f52c0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+:root {
+    --background-color: #18181b;
+    --card-box-shadow-1-y: 3px;
+    --card-box-shadow-1-blur: 6px;
+    --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+    --card-box-shadow-2-y: 8px;
+    --card-box-shadow-2-blur: 15px;
+    --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --card-background-color: rgba(255, 255, 255, 0.015);
+  }
+
+.calculatorbox {
+  background: var(--background-color);
+  box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur)
+      var(--card-box-shadow-1),
+    0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur)
+      var(--card-box-shadow-2),
+    0 0 0 1px var(--card-border-color);
+  padding: 20px 16px 16px 16px;
+  border-radius: 15px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.center {
+  position: relative;
+  left: 25px;
+}
+
+#display {
+  height: 50px;
+  width: 210px;
+  margin-bottom: 20px;
+  background: #93c5fd;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: relative;
+  left: 2px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: JetBrains Mono;
+  color: white;
+}
+
+.button {
+  /* From https://css.glass */
+  background: rgba(37, 99, 235, 1);
+  border-radius: 10px;
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+  border: 1px solid rgba(37, 99, 235, 1);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+
+  font-weight: 900;
+  font-family: JetBrains Mono;
+}
+
+.button:hover {
+  background: #1e40af;
+  cursor: pointer;
+}
+
+.button:active {
+  background: rgba(37, 99, 235, 1);
+}
+
+.input{
+    width: 200px;
+
+    .inputtext {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: JetBrains Mono;
+    overflow-x: hidden;
+    /* overflow-x: scroll;
+    scrollbar-width: 100px;
+    scroll-behavior: smooth;
+    scrollbar-color: #93c5fd #18181b; */
+    }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .calculatorbox {
+    scale: 1.3;
+  }
+}

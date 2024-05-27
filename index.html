@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2838/2838862.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2838/2838862.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  </head>
+  <body>
+    <div id="calculator" class="container">
+      <div class="calculatorbox">
+        <div class="resultbox">
+            <input id="display" readonly class="input">
+        </div>
+        <div id="keys" class="keypad">
+          <button class="button backspace" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+          <button class="button percent" onclick="appendToInput('%')"><i class="fas fa-percent"></i></button>
+          <button class="button clear" onclick="clearInput()"><i class="fas fa-eraser"></i></button>
+          <button class="button divide" onclick="appendToInput('/')"><i class="fas fa-divide"></i></button>
+          <button class="button num7" onclick="appendToInput('7')">7</button>
+          <button class="button num8" onclick="appendToInput('8')">8</button>
+          <button class="button num9" onclick="appendToInput('9')">9</button>
+          <button class="button multiply" onclick="appendToInput('*')"><i class="fas fa-times"></i></button>
+          <button class="button num4" onclick="appendToInput('4')">4</button>
+          <button class="button num5" onclick="appendToInput('5')">5</button>
+          <button class="button num6" onclick="appendToInput('6')">6</button>
+          <button class="button subtract" onclick="appendToInput('-')"><i class="fas fa-minus"></i></button>
+          <button class="button num1" onclick="appendToInput('1')">1</button>
+          <button class="button num2" onclick="appendToInput('2')">2</button>
+          <button class="button num3" onclick="appendToInput('3')">3</button>
+          <button class="button add" onclick="appendToInput('+')"><i class="fas fa-plus"></i></button>
+          <button class="button center num0" onclick="appendToInput('0')">0</button>
+          <button class="button center decimal" onclick="appendToInput('.')">.</button>
+          <button class="button center equal" onclick="calculate()"><i class="fas fa-equals"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
